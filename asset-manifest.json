@@ -1,8 +1,8 @@
 {
-  "main.css": "static/css/main.4d7b3ada.css",
-  "main.css.map": "static/css/main.4d7b3ada.css.map",
-  "main.js": "static/js/main.65c6a8ae.js",
-  "main.js.map": "static/js/main.65c6a8ae.js.map",
+  "main.css": "static/css/main.f4bd2c51.css",
+  "main.css.map": "static/css/main.f4bd2c51.css.map",
+  "main.js": "static/js/main.f4e8ce4c.js",
+  "main.js.map": "static/js/main.f4e8ce4c.js.map",
   "static\\media\\desvelao-bg.jpg": "static/media/desvelao-bg.40edb4a5.jpg",
   "static\\media\\desvelao.jpg": "static/media/desvelao.468bf2b2.jpg",
   "static\\media\\fa-brands-400.eot": "static/media/fa-brands-400.b680adba.eot",
@@ -66,7 +66,7 @@
   "static\\media\\medal_norank.png": "static/media/medal_norank.cb68bcf0.png",
   "static\\media\\medal_top1.png": "static/media/medal_top1.019d6397.png",
   "static\\media\\medal_top10.png": "static/media/medal_top10.33f7027d.png",
-  "static\\media\\medal_top100.png": "static/media/medal_top100.6c1e9b45.png",
+  "static\\media\\medal_top100.png": "static/media/medal_top100.fb51179f.png",
   "static\\media\\medal_top1000.png": "static/media/medal_top1000.605fe606.png",
   "static\\media\\roshan.png": "static/media/roshan.1369cf93.png"
 }
