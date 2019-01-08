@@ -18,18 +18,18 @@ class LoginForm extends Component {
     return (
         <Row className='mx-auto text-center justify-content-center'>
           <Col md='4'>
-            <div className='dv-text-title'>Administración</div>
+            <div className='dv-text-title'>Admin</div>
             <Form>
               <FormGroup>
                 <InputGroup className='mb-2'>
                   <Input placeholder="username" innerRef={ref => this.username = ref}/>
-                  <InputGroupAddon addonType="append">@roshanapp.io</InputGroupAddon>
+                  <InputGroupAddon addonType="append">@roshanapp.admin</InputGroupAddon>
                 </InputGroup>
                 <FormGroup>
                   <Input type='password' placeholder='password' innerRef={ref => this.password = ref}/>
                 </FormGroup>
                 <FormGroup>
-                  <Button color='primary' onClick={() => this.handleLogin()}>Entrar</Button>
+                  <Button color='primary' onClick={() => this.handleLogin()}>Init</Button>
                 </FormGroup>
             </FormGroup>
           </Form>

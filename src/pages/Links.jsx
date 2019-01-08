@@ -21,7 +21,7 @@ class Links_page extends Component {
       <div>
         <Row>
           <Col md="9">
-            <h1 className='dv-text-title mb-2'>{link} Enlaces de interés</h1>
+            <h1 className='dv-text-title mb-2'>{link} Util links</h1>
             <div className=''>
               {collections.map(collection => <Collection key={collection.title} title={collection.title} items={collection.items}/>)}
             </div>

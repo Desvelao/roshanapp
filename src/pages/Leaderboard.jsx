@@ -15,13 +15,13 @@ const ranking = ( props) => {
           <Row className='justify-content-center'>
             <Col md={12} lg={12} className='text-center'>
               <h3 className="mb-1 dv-text-title">Leaderboard</h3>
-              <div className="mb-1 btn-primary d-inline-block p-2 rounded">Actualizada ⏰: {date(leaderboard.updated)}</div>
-              <Table hover striped>
+              <div className="mb-1 btn-primary d-inline-block p-2 rounded">Updated ⏰: {date(leaderboard.updated)}</div>
+              <Table hover striped className='dv-table'>
                 <thead>
                   <tr>
                     <th>Rank</th>
-                    <th>Jugador/a</th>
-                    <th>Medalla</th>
+                    <th>Player</th>
+                    <th>Medal</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -32,7 +32,7 @@ const ranking = ( props) => {
                         <td># {index+1}</td>
                         <td>
                           <div className="d-flex align-items-center text-left">
-                            <img className="mr-2" src={player.avatar} alt="avatar"/>
+                            <img className="mr-2 rounded-circle" src={player.avatar} alt="avatar"/>
                             <span>{player.username} ({player.nick})</span>
                           </div>
                         </td>

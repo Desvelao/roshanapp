@@ -90,16 +90,16 @@ export const getMedal = (input) => {
   //TODO: Add medals top1000, top100, top10, top1
   const topmedals = ['top1000','top100','top10','top1'];
   let rank,leaderboard = input.leaderboard;
-  if(!leaderboard){
+  if(medal < 8){
     if(medal !== 0){
       rank = medals[medal] + "/medal_" + medals[medal] + "_" + level
       tooltip = medals[medal].slice(0,1).toUpperCase() + medals[medal].slice(1) + " " + level
     }else{
       rank = "medal_" + medals[0]
-      tooltip = medals[medal].slice(0,1).toUpperCase() + medals[medal].slice(1)
+      tooltip = 'No rank' //medals[medal].slice(0,1).toUpperCase() + medals[medal].slice(1)
     }
   }else{
-    if(leaderboard > 1000){
+    if(leaderboard > 1000 || !leaderboard){
       rank = "medal_" + medals[8]
       // tooltip = medals[7].slice(0,1).toUpperCase() + medals[7].slice(1) + " " + leaderboard
     }else if(leaderboard <= 1000 && leaderboard > 100){
@@ -115,7 +115,7 @@ export const getMedal = (input) => {
       rank = "medal_" + topmedals[3]
       // tooltip = topmedals[medal].slice(0,1).toUpperCase() + topmedals[medal].slice(1) + " " + leaderboard
     }
-    tooltip = Rank + leaderboard
+    tooltip = Rank + (leaderboard ? leaderboard : '')
   }
   return {img : img_medals('./' +  rank + '.png'), leaderboard : input.leaderboard ? input.leaderboard : '', tooltip : tooltip}
   // return {img : img + rank + '.png', leaderboard : input.leaderboard ? input.leaderboard : '', tooltip : tooltip}

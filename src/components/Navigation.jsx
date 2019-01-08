@@ -41,20 +41,20 @@ class Navigation extends Component{
 
 const MenuPublic = ({ history }) => (
   <Nav className='ml-auto text-center' navbar>
-    <NavItem className='mx-2'>
-      <Link className='align-middle' to={routes.HOME}>Inicio</Link>
+    <NavItem className='dv-nav-link-space'>
+      <Link className='align-middle dv-nav-link' to={routes.HOME}>Home</Link>
     </NavItem>
-    <NavItem className='mx-2'>
-      <Link className='align-middle' to={routes.LEADERBOARD}>Leaderboard</Link>
+    <NavItem className='dv-nav-link-space'>
+      <Link className='align-middle dv-nav-link' to={routes.LEADERBOARD}>Leaderboard</Link>
     </NavItem>
-    <NavItem className='mx-2'>
-      <Link className='align-middle' to={routes.FEEDS}>Feeds</Link>
+    <NavItem className='dv-nav-link-space'>
+      <Link className='align-middle dv-nav-link' to={routes.FEEDS}>Feeds</Link>
     </NavItem>
-    <NavItem className='mx-2'>
-      <Link className='align-middle' to={routes.LINKS}>Links</Link>
+    <NavItem className='dv-nav-link-space'>
+      <Link className='align-middle dv-nav-link' to={routes.LINKS}>Links</Link>
     </NavItem>
-    <NavItem className='mx-2'>
-      <Link className='align-middle' to={routes.ADMIN}>Admin</Link>
+    <NavItem className='dv-nav-link-space'>
+      <Link className='align-middle dv-nav-link' to={routes.ADMIN}>Admin</Link>
     </NavItem>
   </Nav>
 )
@@ -69,7 +69,7 @@ const MenuAdmin = (props) => {
     return (
       <Nav className='ml-auto text-center' navbar>
         <NavItem className='mx-2'>
-          <Link className='align-middle' to={routes.HOME}>Inicio</Link>
+          <Link className='align-middle' to={routes.HOME}>Home</Link>
         </NavItem>
         <NavItem className='mx-2'>
           <Link className='align-middle' to={routes.LEADERBOARD}>Leaderboard</Link>
@@ -84,7 +84,7 @@ const MenuAdmin = (props) => {
           <Link className='align-middle' to={routes.ADMIN}>Panel</Link>
         </NavItem>
         <NavItem className='mx-2'>
-          <Button size='sm' color='link' className="text-danger" onClick={() => logout(history)}>Salir</Button>
+          <Button size='sm' color='link' className="text-danger" onClick={() => logout(history)}>Leave</Button>
         </NavItem>
       </Nav>
     )

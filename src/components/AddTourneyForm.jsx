@@ -33,25 +33,25 @@ class AddTourneyForm extends Component{
     const { _id, img, by, link, start, finish, until, info, log } = this.state
     return (
       <Col className='mx-auto'>
-        <div className='dv-text-title'>{this.props.authUser ? 'Añade' : 'Sugiere'} un torneo/evento</div>
+        <div className='dv-text-title'>{this.props.authUser ? 'Add' : 'Suggest'} a tournament/event</div>
         <hr/>
         <Form>
           <Row>
             <Col md='6'>
               <FormGroup row>
                 <Col xs='12'>
-                  <Label for='tourney_name'>Nombre del torneo</Label>
-                  <Input type='text' id='tourney_name' placeholder='Nombre del torneo' onChange={(e) => this.handleState('_id',e)} value={_id}/>
+                  <Label for='tourney_name'>Tournament name</Label>
+                  <Input type='text' id='tourney_name' placeholder='Tournament name' onChange={(e) => this.handleState('_id',e)} value={_id}/>
                 </Col>
                 <Col xs='12'>
-                  <Label for='by'>Organiza</Label>
-                    <Input type='text' id='by' placeholder='Organiza' onChange={(e) => this.handleState('by',e)} innerRef={(input) => this.by = input} value={by}/>
+                  <Label for='by'>Host</Label>
+                    <Input type='text' id='by' placeholder='Host' onChange={(e) => this.handleState('by',e)} innerRef={(input) => this.by = input} value={by}/>
                 </Col>
               </FormGroup>
               <FormGroup row>
                 <Col xs={8}>
-                  <Label for='img'>Imagen del torneo (url)</Label>
-                  <Input type='text' id='img' placeholder='Imagen del torneo (url)' value={img} onChange={(e) => this.handleState('img',e)}/>
+                  <Label for='img'>Tournament image URL</Label>
+                  <Input type='text' id='img' placeholder='Tournament image URL' value={img} onChange={(e) => this.handleState('img',e)}/>
                 </Col>
                 <Col xs={4} className='h-100'>
                   <img src={img} className='w-100' />
@@ -67,23 +67,23 @@ class AddTourneyForm extends Component{
             <Col md='6'>
               <FormGroup row>
                 <Col xs='6'>
-                  <Label for='start'>Inicio</Label>
+                  <Label for='start'>Start</Label>
                   <Input type='date' id='start' value={start} onChange={(e) => this.handleState('start',e)} innerRef={(input) => this.link = input}/>
                 </Col>
                 <Col xs='6'>
-                  <Label for='finish'>Termina</Label>
+                  <Label for='finish'>End</Label>
                   <Input type='date' id='finish' value={finish} onChange={(e) => this.handleState('finish',e)} innerRef={(input) => this.link = input}/>
                 </Col>
               </FormGroup>
               <FormGroup row>
                 <Col xs='6'>
-                  <Label for='until'>Inscripciones hasta</Label>
+                  <Label for='until'>Inscriptions until</Label>
                   <Input type='date' id='until' value={until} onChange={(e) => this.handleState('until',e)} innerRef={(input) => this.link = input}/>
                 </Col>
               </FormGroup>
               <FormGroup>
-                <Label for='info'>Información</Label>
-                <Input type='textarea' id='info' placeholder='Información' onChange={(e) => this.handleState('info',e)} innerRef={(input) => this.info = input} value={info}/>
+                <Label for='info'>Info</Label>
+                <Input type='textarea' id='info' placeholder='Info' onChange={(e) => this.handleState('info',e)} innerRef={(input) => this.info = input} value={info}/>
               </FormGroup>
             </Col>
           </Row>
@@ -91,14 +91,14 @@ class AddTourneyForm extends Component{
             <Col>
               <FormGroup row className='text-center'>
                 <Col className='mx-auto'>
-                  <Button className='mb-2' color={this.conditionValidate() ? 'success' : 'danger'} onClick={() => this.handleAddTourney()}>{this.props.authUser ? 'Enviar' : 'Sugerir'}</Button>
+                  <Button className='mb-2' color={this.conditionValidate() ? 'success' : 'danger'} onClick={() => this.handleAddTourney()}>{this.props.authUser ? 'Send' : 'Suggest'}</Button>
                   {log.message ? <Alert color={log.type}>{log.message}</Alert> : ''}
                 </Col>
               </FormGroup>
             </Col>
           </Row>
         </Form>
-        {this.props.authUser ? null : (<div className='text-muted'>*Después de sugerir tiene que ser aprobado por un admin</div>)}
+        {this.props.authUser ? null : (<div className='text-muted'>*After suggestion an admin has to accept it.</div>)}
       </Col>
     )
   }
@@ -109,18 +109,18 @@ class AddTourneyForm extends Component{
     return this.state._id
   }
   handleAddTourney(){
-    if(!this.state._id){return this.log('ERROR: No se ha establecido el nombre del torneo','danger')}
+    if(!this.state._id){return this.log('ERROR: Tournament title is not set','danger')}
     const tourney = {_id : this.state._id, by : this.state.by, img : this.state.img, start : inputdateToTS(this.state.start,'start'), finish : inputdateToTS(this.state.finish,'end'), until : inputdateToTS(this.state.until,'end'),
       link : this.state.link, info : this.state.info, ts : nowToSeconds()}
     const exists = this.props.tourneys.find(t => t._id === tourney._id) ? true : false
     if(this.props.authUser){
       this.props.addTourney(tourney,
         () => {
-          this.log(`Añadido torneo: ${tourney._id}`)
+          this.log(`Tournament added: ${tourney._id}`)
         }
       )
     }else{
-      const embed = {username : 'Nuevo Torneo', avatar_url : '',
+      const embed = {username : 'New Torneo', avatar_url : '',
         embeds : [
           {
             title : `Nuevo torneo`,
@@ -138,7 +138,7 @@ class AddTourneyForm extends Component{
         ]
       }
       postDiscord(embed,'fromapp')
-      this.log('Se ha enviado la sugerencia para nuevo torneo', 'success')
+      this.log('Tournament suggestion was sent', 'success')
       // db.addTeamFirebase(team,true).then(() => this.log(`${team._id} enviado`,'success'))
     }
 

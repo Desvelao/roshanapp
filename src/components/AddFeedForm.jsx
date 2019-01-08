@@ -28,19 +28,19 @@ class AddFeedForm extends Component{
     const { _id, title, body, link, log } = this.state
     return (
       <Col className='mx-auto'>
-        <div className='dv-text-title'>Añade un feed</div>
+        <div className='dv-text-title'>Add a feed</div>
         <hr/>
         <Form>
           <Row className='justify-content-center'>
             <Col md='6'>
               <FormGroup row>
                 <Col xs='12'>
-                  <Label for='title'>Título</Label>
-                  <InputEmoji type='text' id='title' placeholder='Título' onChange={(e) => this.handleState('title',e)} value={title} onSelect={(val) => this.setState({title : val})} closeOnSelect/>
+                  <Label for='title'>Title</Label>
+                  <InputEmoji type='text' id='title' placeholder='Title' onChange={(e) => this.handleState('title',e)} value={title} onSelect={(val) => this.setState({title : val})} closeOnSelect/>
                 </Col>
                 <Col xs='12'>
                   <Label for='body'>Descripción</Label>
-                  <InputEmoji type='textarea' id='body' placeholder='Descripción' onChange={(e) => this.handleState('body',e)} value={body} onSelect={(val) => this.setState({body : val})} closeOnSelect/>
+                  <InputEmoji type='textarea' id='body' placeholder='Description' onChange={(e) => this.handleState('body',e)} value={body} onSelect={(val) => this.setState({body : val})} closeOnSelect/>
                 </Col>
                 <Col xs='12'>
                   <Label for='link'>Link</Label>
@@ -53,7 +53,7 @@ class AddFeedForm extends Component{
             <Col>
               <FormGroup row className='text-center'>
                 <Col className='mx-auto'>
-                  <Button className='mb-2' color={this.conditionValidate() ? 'success' : 'danger'} onClick={() => this.handleAdd()}>{this.props.authUser ? 'Enviar' : 'Sugerir'}</Button>
+                  <Button className='mb-2' color={this.conditionValidate() ? 'success' : 'danger'} onClick={() => this.handleAdd()}>{this.props.authUser ? 'Send' : 'Suggest'}</Button>
                   {log.message ? <Alert color={log.type}>{log.message}</Alert> : ''}
                 </Col>
               </FormGroup>
@@ -70,13 +70,13 @@ class AddFeedForm extends Component{
     return this.state.title
   }
   handleAdd(){
-    if(!this.state.title){return this.log('ERROR: No se ha establecido el título del feed','danger')}
+    if(!this.state.title){return this.log('ERROR: Feed title is not set','danger')}
     const feed = {_id : this.state._id || nowToSeconds(), title : this.state.title, body : this.state.body, link : this.state.link, ts : this.state._id || nowToSeconds()}
     const exists = this.props.feeds.find(f => f._id === feed._id) ? true : false
     if(this.props.authUser){
       this.props.addFeed(feed,
         () => {
-          this.log(`Añadido Feed: ${feed.title}`)
+          this.log(`Feed added: ${feed.title}`)
           postDiscord({
             username : 'Feed',
             avatar_url : 'https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/4/46/Town_Portal_Scroll_icon.png?version=ef289382c3a21198b278868bf6f6dfd4',

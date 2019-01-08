@@ -4,7 +4,7 @@ body {
   font-family: sans-serif;
 }
 
-th{
+/* th{
   background-color: #b303b6;
   color: white;
 }
@@ -27,4 +27,4 @@ tr:nth-child(even){background-color: white}
 td img{
   height: 1.5em;
   border-radius: 50%;
-}
+} */

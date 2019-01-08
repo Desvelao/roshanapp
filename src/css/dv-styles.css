@@ -5,6 +5,72 @@ body{
   font-family: 'Raleway', Arial, sans-serif;
   box-sizing: border-box;
 }
+
+.dv-table th{
+  background-color: #b303b6;
+  color: white;
+  padding: 1em !important;
+}
+
+.dv-table td{
+  padding: 0.5em !important;
+}
+
+.dv-table th,.dv-table td{
+  border: 0 !important;
+  height: 1.5em;
+  text-align: center;
+  border-top: 0;
+}
+
+.dv-table tr:nth-child(odd){background-color: #f2f2f2}
+.dv-table tr:nth-child(even){background-color: white}
+.dv-table img{
+  height: 1.5em;
+}
+
+.dv-table-th{
+  background-color: #b303b6;
+  color: white;
+  padding: 1em !important;
+}
+
+.dv-table-td{
+  padding: 0.5em !important;
+}
+
+.dv-table-th, .dv-table-td {
+  border: 0 !important;
+  height: 1.5em;
+  text-align: center;
+  border-top: 0;
+}
+.dv-table-tr:nth-child(odd){background-color: #f2f2f2}
+.dv-table-tr:nth-child(even){background-color: white}
+
+.dv-table-td img{
+  height: 1.5em;
+}
+
+.dv-nav-link-space{
+  padding: 0 0.5em;
+}
+
+.dv-nav-link-space:hover{
+  /* background: red; */
+}
+
+.dv-nav-link{
+  /* color: rgb(100, 100, 100); */
+  text-decoration: none;
+}
+
+.dv-nav-link:hover{
+  color: #b303b6;
+  font-weight: bold;
+  text-decoration: none;
+}
+
 .dv-list-nodeco {
   list-style-type: none;
 }
@@ -199,6 +265,9 @@ body{
 #dv-link-color-steam:hover{
   color: #000000;
 }
+#dv-link-color-github:hover{
+  color: #000000;
+}
 #dv-link-color-patreon:hover{
   color: #F96854;
 }
@@ -349,4 +418,12 @@ body{
 .dv-profile-card.hover a:nth-child(3) i {
   -webkit-transition-delay: 0.3s;
   transition-delay: 0.3s;
+}
+
+.dv-botfeatures-li{
+  list-style-type: circle
+}
+
+.dv-botfeatures-name{
+  
 }

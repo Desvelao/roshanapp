@@ -46,6 +46,7 @@ const ProfileSocial = (props) => {
         <a className='mx-1' href={DESVELAO_TWITTER} target='_blank'><i className='fab fa-twitter' id='dv-link-color-twitter'></i></a>
         <a className='mx-1' href={DESVELAO_STEAM} target='_blank'><i className='fab fa-steam' id='dv-link-color-steam'></i></a>
         <a className='mx-1' href={DESVELAO_REDDIT} target='_blank'><i className='fab fa-reddit' id='dv-link-color-reddit'></i></a>
+        <a className='mx-1' href={DESVELAO_GITHUB} target='_blank'><i className='fab fa-github' id='dv-link-color-github'></i></a>
       </div>
     </div>
   )

@@ -21,7 +21,7 @@ const TourneyInfo = (props) => {
         <Row className='justify-content-center'>
           <Col className='text-center'>
             <img className='mb-3 dv-team-profile-img w-100 dv-border-05' src={tourney.img} onError={(e) => {e.target.onError=null;e.target.src=tourney_event_default_pic}}/>
-            {tourney.by && (<div className='mb-1 font-weight-bold text-muted'>Organiza:<div>{tourney.by}</div></div>)}
+            {tourney.by && (<div className='mb-1 font-weight-bold text-muted'>Organize:<div>{tourney.by}</div></div>)}
           </Col>
         </Row>
       </Col>
@@ -33,7 +33,7 @@ const TourneyInfo = (props) => {
           </div>)
         }
         <div className='mb-2'>
-          {(tourney.start || tourney.finish || tourney.until) && (<div className='dv-text-title text-left'>Fechas</div>)}
+          {(tourney.start || tourney.finish || tourney.until) && (<div className='dv-text-title text-left'>Date</div>)}
           <div>
             {tourney.start && (<span>{calendar} {secondsToDate(tourney.start)}</span>)}
             {tourney.finish && (<span> {red_flag} {secondsToDate(tourney.finish)}</span>)}

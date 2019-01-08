@@ -22,10 +22,11 @@ import withAuthentication from './hocs/withAuthentication.jsx'
 
 class App extends Component {
   componentDidMount() {
-    this.props.loadLeaderboard()
-    this.props.loadTourneys()
-    this.props.loadFeeds()
-    this.props.loadPublic()
+    // this.props.loadLeaderboard()
+    // this.props.loadTourneys()
+    // this.props.loadFeeds()
+    // this.props.loadPublic()
+    loadData(this)
   }
   render() {
     return (
@@ -75,6 +76,12 @@ const mapDispatchToProps = (dispatch) => ({
   loadPublic : () => dispatch(actions.loadPublicFirebase()),
 })
 
+function loadData({ props }){
+  props.loadLeaderboard()
+  props.loadTourneys()
+  props.loadFeeds()
+  props.loadPublic()
+}
 // export default connect(null,mapDispatchtoProps)(App);
 
 export default compose(

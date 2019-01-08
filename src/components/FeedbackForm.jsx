@@ -33,16 +33,16 @@ class FeedbackForm extends Component{
             <Col md='6'>
               <FormGroup row>
                 <Col xs='12'>
-                  <Label for='title'>Título</Label>
-                  <Input type='text' id='title' placeholder='Título' onChange={(e) => this.handleState('title',e)} value={title}/>
+                  <Label for='title'>Title</Label>
+                  <Input type='text' id='title' placeholder='Title' onChange={(e) => this.handleState('title',e)} value={title}/>
                 </Col>
                 <Col xs='12'>
-                  <Label for='author'>Autor</Label>
-                    <Input type='text' id='author' placeholder='Autor' onChange={(e) => this.handleState('author',e)} innerRef={(input) => this.author = input} value={author}/>
+                  <Label for='author'>Author</Label>
+                    <Input type='text' id='author' placeholder='Author' onChange={(e) => this.handleState('author',e)} innerRef={(input) => this.author = input} value={author}/>
                 </Col>
                 <Col xs='12'>
-                  <Label for='body'>Descripción</Label>
-                    <Input type='textarea' id='body' placeholder='Descripción' onChange={(e) => this.handleState('body',e)} innerRef={(input) => this.body = input} value={body}/>
+                  <Label for='body'>Description</Label>
+                    <Input type='textarea' id='body' placeholder='Description' onChange={(e) => this.handleState('body',e)} innerRef={(input) => this.body = input} value={body}/>
                 </Col>
               </FormGroup>
             </Col>
@@ -51,7 +51,7 @@ class FeedbackForm extends Component{
             <Col>
               <FormGroup row className='text-center'>
                 <Col className='mx-auto'>
-                  <Button className='mb-2' color={this.conditionValidate() ? 'success' : 'danger'} onClick={() => this.handleAdd()}>Enviar</Button>
+                  <Button className='mb-2' color={this.conditionValidate() ? 'success' : 'danger'} onClick={() => this.handleAdd()}>Send</Button>
                   {log.message ? <Alert color={log.type}>{log.message}</Alert> : ''}
                 </Col>
               </FormGroup>
@@ -68,9 +68,9 @@ class FeedbackForm extends Component{
     return this.state.title && this.state.body.length > 13 && this.state.author.length > 0
   }
   handleAdd(){
-    if(!this.state.title){return this.log('ERROR: No se ha establecido el título','danger')}
-    if(!this.state.author.length > 0){return this.log('ERROR: Debes escribir un autor del mensaje','danger')}
-    if(this.state.body.length < 13){return this.log('ERROR: Pocas palabras en el cuerpo del mensaje','danger')}
+    if(!this.state.title){return this.log('ERROR: Title is not set','danger')}
+    if(!this.state.author.length > 0){return this.log('ERROR: Write message author','danger')}
+    if(this.state.body.length < 13){return this.log('ERROR: Message body needs more words','danger')}
     const msg = {title : this.state.title, body : this.state.body, author : this.state.author, ts : nowToSeconds()}
     postDiscord({username : 'Feedback', avatar_url : '',
       embeds : [
@@ -82,7 +82,7 @@ class FeedbackForm extends Component{
       ]
     },'playgrounds')
 
-    this.log('¡Muchas gracias por tu sugerencia!','success',true)
+    this.log('Thank you so much for your feedback!','success',true)
 
   }
   log(message,type,reset){
