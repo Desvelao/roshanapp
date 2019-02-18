@@ -8,6 +8,7 @@ import { colorBot } from '../constants'
 import FeedCard from '../components/FeedCard.jsx'
 import { gear , robot , loudspeaker , money_mouth_face } from '../constants/emojis.js'
 import { DESVELAO_PROFILE, DESVELAO_BE_PATRON, DESVELAO_KOFI } from '../constants/links'
+import Patreon from '../img/patreon.png'
 
 class Sidebar extends Component{
   constructor(props){
@@ -32,10 +33,14 @@ class Sidebar extends Component{
             <div>Bot: <strong>v{this.props.public_info.version}</strong></div>
             <div><strong>{this.props.public_info.users}</strong> registered</div>
             Register: <code>r!register</code>
-            <a className='d-block' href={DESVELAO_BE_PATRON} target='_blank'>{money_mouth_face} Patreon {money_mouth_face}</a>
-            <a className='d-block' href={DESVELAO_KOFI} target='_blank'>{money_mouth_face} Ko-fi {money_mouth_face}</a>
+            {/* <a className='d-block' href={DESVELAO_BE_PATRON} target='_blank'>{money_mouth_face} Donate with Patreon {money_mouth_face}</a> */}
+            {/* <a className='d-block' href={DESVELAO_KOFI} target='_blank'>{money_mouth_face} Donate with Ko-fi {money_mouth_face}</a> */}
             <Link className='d-block' to={routes.FEEDBACK}>Feedback</Link>
             <Link className='d-block' to={routes.ADD_PUBLIC_TOURNEY}>Suggest a tournament/event</Link>
+            <Link className='d-block' to={routes.PLAYERCARDBG}>Player card backgrounds</Link>
+            <Link className='d-block' to={routes.LINKS}>Util links</Link>
+            <a className='d-block' href={DESVELAO_BE_PATRON} data-patreon-widget-type="become-patron-button" target='_blank'><img className='dv-patreon-button mb-2' src={Patreon} alt='Become a Patron!' target='_blank' /></a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+            <a className='d-block' href={DESVELAO_KOFI} target='_blank'><img height='34' style={{ border: 0, height: 34 }} src='https://az743702.vo.msecnd.net/cdn/kofi4.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
           </div>
         </div>
         <hr/>

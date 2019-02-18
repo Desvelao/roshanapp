@@ -48,10 +48,7 @@ const MenuPublic = ({ history }) => (
       <Link className='align-middle dv-nav-link' to={routes.LEADERBOARD}>Leaderboard</Link>
     </NavItem>
     <NavItem className='dv-nav-link-space'>
-      <Link className='align-middle dv-nav-link' to={routes.FEEDS}>Feeds</Link>
-    </NavItem>
-    <NavItem className='dv-nav-link-space'>
-      <Link className='align-middle dv-nav-link' to={routes.LINKS}>Links</Link>
+      <Link className='align-middle dv-nav-link' to={routes.FEATURES}>Features</Link>
     </NavItem>
     <NavItem className='dv-nav-link-space'>
       <Link className='align-middle dv-nav-link' to={routes.ADMIN}>Admin</Link>
@@ -74,11 +71,8 @@ const MenuAdmin = (props) => {
         <NavItem className='mx-2'>
           <Link className='align-middle' to={routes.LEADERBOARD}>Leaderboard</Link>
         </NavItem>
-        <NavItem className='mx-2'>
-          <Link className='align-middle' to={routes.FEEDS}>Feeds</Link>
-        </NavItem>
-        <NavItem className='mx-2'>
-          <Link className='align-middle' to={routes.LINKS}>Links</Link>
+        <NavItem className='dv-nav-link-space'>
+          <Link className='align-middle dv-nav-link' to={routes.FEATURES}>Features</Link>
         </NavItem>
         <NavItem className='mx-2'>
           <Link className='align-middle' to={routes.ADMIN}>Panel</Link>

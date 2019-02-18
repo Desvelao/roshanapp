@@ -9,5 +9,7 @@ export default {
   FEEDBACK : '/feedback',
   POSTS : '/posts',
   ADMIN : '/admin',
-  LINKS : '/links'
+  LINKS : '/links',
+  PLAYERCARDBG : '/playercardbg',
+  FEATURES : '/features',
 }

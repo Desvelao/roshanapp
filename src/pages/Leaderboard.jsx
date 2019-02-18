@@ -13,7 +13,7 @@ const ranking = ( props) => {
       <Row>
         <Col md="9">
           <Row className='justify-content-center'>
-            <Col md={12} lg={12} className='text-center'>
+            <Col md={8} lg={8} className='text-center'>
               <h3 className="mb-1 dv-text-title">Leaderboard</h3>
               <div className="mb-1 btn-primary d-inline-block p-2 rounded">Updated ⏰: {date(leaderboard.updated)}</div>
               <Table hover striped className='dv-table'>
@@ -33,7 +33,8 @@ const ranking = ( props) => {
                         <td>
                           <div className="d-flex align-items-center text-left">
                             <img className="mr-2 rounded-circle" src={player.avatar} alt="avatar"/>
-                            <span>{player.username} ({player.nick})</span>
+                            {/* <span>{player.username} ({player.nick})</span> */}
+                            <span>{player.nick}</span>
                           </div>
                         </td>
                         <td title={medal.tooltip}>

@@ -65,11 +65,13 @@ body{
   text-decoration: none;
 }
 
-.dv-nav-link:hover{
+.dv-nav-link:hover, a:hover{
   color: #b303b6;
-  font-weight: bold;
-  text-decoration: none;
+  /* font-weight: bold; */
+  /* text-decoration: none; */
+  text-decoration: underline;
 }
+
 
 .dv-list-nodeco {
   list-style-type: none;
@@ -421,7 +423,7 @@ body{
 }
 
 .dv-botfeatures-li{
-  list-style-type: circle
+  list-style-type: none;/*circle*/
 }
 
 .dv-botfeatures-name{

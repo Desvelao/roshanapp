@@ -7,6 +7,8 @@ import Leaderboard from './pages/Leaderboard.jsx'
 import Admin from './pages/Admin.jsx'
 import Feeds from './pages/Feeds.jsx'
 import Links from './pages/Links.jsx'
+import PlayercardBG from './pages/PlayercardbgGallery.jsx'
+import Features from './pages/Features.jsx'
 import AddTourneyForm from './components/AddTourneyForm.jsx'
 import AddFeedForm from './components/AddFeedForm.jsx'
 import FeedbackForm from './components/FeedbackForm.jsx'
@@ -45,6 +47,8 @@ class App extends Component {
                 <Route exact path={routes.ADD_TOURNEY} component={AddTourneyForm}/>
                 <Route exact path={routes.ADMIN} component={Admin}/>
                 <Route exact path={routes.LINKS} component={Links}/>
+                <Route exact path={routes.PLAYERCARDBG} component={PlayercardBG}/>
+                <Route exact path={routes.FEATURES} component={Features}/>
               </Switch>
             </div>
           </Container>

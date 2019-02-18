@@ -19,7 +19,6 @@ import Sidebar from '../components/Sidebar.jsx'
 import Patreon from '../img/patreon.png'
 import { gear , robot , loudspeaker , money_mouth_face } from '../constants/emojis.js'
 import { DESVELAO_PROFILE, DESVELAO_BE_PATRON, FED_DISCORD } from '../constants/links'
-import Botinfo from './Botinfo.jsx'
 
 class Home extends Component{
   constructor(props){
@@ -51,7 +50,7 @@ class Home extends Component{
             <hr className='mb-4'/>
             <Row className='justify-content-center' id='dv-home-bg'>
               <Col className='text-center'>
-                <h1 className='dv-text-title mb-2'>Upcoming tournaments <span>({tourneys_next.length})</span></h1>
+                <h1 className='dv-text-title mb-2'>Next tournaments <span>({tourneys_next.length})</span></h1>
                 <Row>
                   {tourneys_next.map( t => (
                     <Col className='mb-2' xs='6' md='3' key={t._id}>
@@ -67,8 +66,6 @@ class Home extends Component{
                 <LeyendaIcons/>
               </Col>
             </Row>
-            <hr className='mb-4'/>
-            <Botinfo />
             <hr className='mb-4'/>
           </Col>
           <Col md='3'>

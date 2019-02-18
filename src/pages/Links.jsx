@@ -22,9 +22,9 @@ class Links_page extends Component {
         <Row>
           <Col md="9">
             <h1 className='dv-text-title mb-2'>{link} Util links</h1>
-            <div className=''>
+            <Row>
               {collections.map(collection => <Collection key={collection.title} title={collection.title} items={collection.items}/>)}
-            </div>
+            </Row>
           </Col>
           <Col md='3'>
             <Sidebar/>
@@ -36,13 +36,10 @@ class Links_page extends Component {
   }
 }
 
-const Collection = (props) => (<div>
+const Collection = (props) => (<Col md='6'>
   <strong>{props.title}</strong>
   {props.items.map((lk,i) => (<a key={i} className='d-block' href={lk.link}>{lk.title}{lk.description ? (<span className='dv-feeds-body'> - {lk.description}</span>) : null}</a>))}
   <br/>
-</div>)
-// const mapStateToProps = (state) => ({
-//   feeds : state.feeds
-// })
+</Col>)
 
 export default Links_page

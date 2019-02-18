@@ -86,14 +86,14 @@ export default withRouter(connect(mapStateToProps,mapDispatchToProps)(AdminPanel
 
 const TableTourneys = (props) => (
   <div>
-    <div className='dv-text-title'>Torneos <Link to={routes.ADD_TOURNEY} className='btn btn-primary'><i className='fas fa-plus'></i></Link></div>
+    <div className='dv-text-title'>Torurnaments <Link to={routes.ADD_TOURNEY} className='btn btn-primary'><i className='fas fa-plus'></i></Link></div>
     <Table className='text-center dv-table'>
       <thead>
         <tr>
-          <th>Nombre</th>
-          <th>Comienza</th>
-          <th>Termina</th>
-          <th>Acciones</th>
+          <th>Name</th>
+          <th>Start</th>
+          <th>Finish</th>
+          <th>Actions</th>
         </tr>
       </thead>
       <tbody>
@@ -114,9 +114,9 @@ const TableFeeds = (props) => (
     <Table className='text-center dv-table'>
       <thead>
         <tr>
-          <th>Título</th>
-          <th>Descripción</th>
-          <th>Acciones</th>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Actions</th>
         </tr>
       </thead>
       <tbody>

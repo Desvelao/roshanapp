@@ -8,7 +8,7 @@ export const DESVELAO_REDDIT = 'https://www.reddit.com/user/Desvelao/'
 export const DESVELAO_PATREON = 'https://www.patreon.com/desvelao'
 export const FED_DISCORD = 'https://discord.gg/K5krgBg'
 export const DESVELAO_BE_PATRON = 'https://www.patreon.com/bePatron?u=8800190'
-export const DESVELAO_KOFI = 'https://www.kofi.com/desvelao'
+export const DESVELAO_KOFI = 'https://www.ko-fi.com/desvelao'
 
 export const collections = [
   {
@@ -52,7 +52,7 @@ export const collections = [
     ]
   },
   {
-    title : '🔢 Otros',
+    title : '🔢 Others',
     items : [
       {title : 'FED Web', link : 'http://www.fedota2.es', description : 'Web de la FED'},
       {title : 'Eventvods', link : 'https://eventvods.com', description : 'VODs'},
@@ -68,7 +68,7 @@ export const collections = [
     ]
   },
   {
-    title : '🏆 Torneos',
+    title : '🏆 Tournaments',
     items : [
       {title : 'TGX', link : 'https://tgx.es', description : 'Tournament Platform'},
       {title : 'Toornament', link : 'https://www.toornament.com', description : 'Tournament Platform'},

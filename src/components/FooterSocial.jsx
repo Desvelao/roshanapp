@@ -13,7 +13,7 @@ import { tourney_event_default_pic } from '../constants'
 import ProfileCard, { ProfileSocial } from '../components/ProfileCard'
 import Patreon from '../img/patreon.png'
 import { gear , robot , loudspeaker , money_mouth_face } from '../constants/emojis.js'
-import { DESVELAO_PROFILE, DESVELAO_BE_PATRON } from '../constants/links'
+import { DESVELAO_PROFILE, DESVELAO_BE_PATRON, DESVELAO_KOFI } from '../constants/links'
 
 const FooterSocial = (props) => {
     const { tourney, active } = props
@@ -29,7 +29,7 @@ const FooterSocial = (props) => {
           </Col>
           <Col md='' className='mx-auto text-center v-align-bottom'>
             <a className='' href={DESVELAO_BE_PATRON} data-patreon-widget-type="become-patron-button" target='_blank'><img className='dv-patreon-button mb-2' src={Patreon} alt='Become a Patron!' target='_blank'/></a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
-            <a className='ml-1' href='https://ko-fi.com/desvelao' target='_blank'><img height='34' style={{border : 0, height : 34}} src='https://az743702.vo.msecnd.net/cdn/kofi4.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+            <a className='ml-1' href={DESVELAO_KOFI} target='_blank'><img height='34' style={{border : 0, height : 34}} src='https://az743702.vo.msecnd.net/cdn/kofi4.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
           </Col>
         </Row>
       </div>
