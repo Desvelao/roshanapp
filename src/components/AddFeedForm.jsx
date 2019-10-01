@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom'
-import { Redirect } from 'react-router'
 import { connect } from 'react-redux'
-import routes from '../constants/routes'
 import { Alert, Container, Row, Col, Input, InputGroup, InputGroupAddon, Form, FormGroup, FormText, Label, Button } from 'reactstrap'
-import { auth, db } from '../firebase'
 import { addFeedFirebase, deleteTourneyFirebase } from '../reducers/actioncreators'
 import { nowToSeconds, postDiscord } from '../utils'
-import { colorBot } from '../constants'
+import { colorBot, webURL } from '../constants'
 import withAuthorization from '../hocs/withAuthorization.jsx'
 import InputEmoji from '../components/InputEmoji.jsx'
 
@@ -78,10 +75,10 @@ class AddFeedForm extends Component{
         () => {
           this.log(`Feed added: ${feed.title}`)
           postDiscord({
-            username : 'Feed',
+            username : 'RoshanApp',
             avatar_url : 'https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/4/46/Town_Portal_Scroll_icon.png?version=ef289382c3a21198b278868bf6f6dfd4',
             embeds : [{
-              author : {name : 'Nuevo feed', icon_url : 'https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/4/46/Town_Portal_Scroll_icon.png?version=ef289382c3a21198b278868bf6f6dfd4'},
+              author : {name : 'New feed', url: webURL, icon_url : 'https://bacapesat.com/content/images/2017/12/1.jpg'},
               description : `**${feed.title}** *${feed.body}*${feed.link ? '\n:link: ' + feed.link : ''}`,
               color : colorBot
             }]

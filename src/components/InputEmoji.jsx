@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
-import { Redirect } from 'react-router'
-import { connect } from 'react-redux'
-import routes from '../constants/routes'
 import { Container, Row, Col, Input, InputGroup, InputGroupAddon, Form, FormGroup, FormText, Label, Button,
   Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle} from 'reactstrap'
-import { auth, db } from '../firebase'
 import 'emoji-mart/css/emoji-mart.css'
 import { Picker } from 'emoji-mart'
 import { smile } from '../constants/emojis.js'

@@ -1,13 +1,6 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom'
-import { Redirect } from 'react-router'
-import { connect } from 'react-redux'
-import routes from '../constants/routes'
 import { Alert, Container, Row, Col, Input, InputGroup, InputGroupAddon, Form, FormGroup, FormText, Label, Button } from 'reactstrap'
-import { auth, db } from '../firebase'
-import { addFeedFirebase, deleteTourneyFirebase } from '../reducers/actioncreators'
 import { nowToSeconds , postDiscord } from '../utils'
-import withAuthorization from '../hocs/withAuthorization.jsx'
 
 const initialState = {log : {message : '', type : ''}, __id : '', edit : false, _id : '', title : '', body : '' , author : ''}
 

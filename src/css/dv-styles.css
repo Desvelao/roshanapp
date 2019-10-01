@@ -6,8 +6,16 @@ body{
   box-sizing: border-box;
 }
 
+.dv-color-primary{
+  color: #ffa500;
+}
+
+.dv-color-secondary{
+  color: #ffa500;
+}
+
 .dv-table th{
-  background-color: #b303b6;
+  background-color: #ffaf42;
   color: white;
   padding: 1em !important;
 }
@@ -30,7 +38,7 @@ body{
 }
 
 .dv-table-th{
-  background-color: #b303b6;
+  background-color: #ffaf42;
   color: white;
   padding: 1em !important;
 }
@@ -66,7 +74,7 @@ body{
 }
 
 .dv-nav-link:hover, a:hover{
-  color: #b303b6;
+  color: #ffaf42;
   /* font-weight: bold; */
   /* text-decoration: none; */
   text-decoration: underline;
@@ -144,7 +152,7 @@ body{
   font-size : 0.75rem;
 }
 .dv-color-primary{
-  color : #b303b6;
+  color : #ffaf42;
 }
 
 .dv-color-secondary{
@@ -152,7 +160,7 @@ body{
 }
 
 .dv-feeds-title{
-  color : #b303b6;
+  color : #ffaf42;
   font-weight: bold;
 }
 

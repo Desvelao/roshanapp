@@ -1,18 +1,8 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
-import { Redirect } from 'react-router'
-import { connect } from 'react-redux'
-import routes from '../constants/routes'
+import React from 'react';
 import { Container, Row, Col, Input, InputGroup, InputGroupAddon, Form, FormGroup, FormText, Label, Button,
   Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle} from 'reactstrap'
-import { auth, db } from '../firebase'
-import { ButtonsEdit } from '../components/ButtonEditDelete'
-import { secondsToDate , isNew } from '../utils'
-import { pencil, calendar, red_flag, link, new_, information } from '../constants/emojis.js'
-import { tourney_event_default_pic } from '../constants'
 import ProfileCard, { ProfileSocial } from '../components/ProfileCard'
 import Patreon from '../img/patreon.png'
-import { gear , robot , loudspeaker , money_mouth_face } from '../constants/emojis.js'
 import { DESVELAO_PROFILE, DESVELAO_BE_PATRON, DESVELAO_KOFI } from '../constants/links'
 
 const FooterSocial = (props) => {

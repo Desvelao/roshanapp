@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import { withRouter, Switch, Route } from 'react-router-dom'
-import LoginForm from '../components/LoginForm.jsx'
 import { Link } from 'react-router-dom'
 import routes from '../constants/routes'
 import { connect } from 'react-redux'
-import { auth } from '../firebase'
 import { ButtonsEdit } from '../components/ButtonEditDelete.jsx'
 import { Container, Row, Col, Input, InputGroup, InputGroupAddon, Form, FormGroup, FormText, Button,
 Nav, NavItem, NavLink, TabContent,TabPane,Card,CardTitle,CardText, Table } from 'reactstrap'
@@ -38,7 +36,7 @@ class AdminPanel extends Component {
               className={classnames({ active: this.state.activeTab === '1' })}
               onClick={() => { this.toggle('1'); }}
               >
-              Torneos
+              Tournaments
             </NavLink>
           </NavItem>
           <NavItem>
@@ -86,7 +84,7 @@ export default withRouter(connect(mapStateToProps,mapDispatchToProps)(AdminPanel
 
 const TableTourneys = (props) => (
   <div>
-    <div className='dv-text-title'>Torurnaments <Link to={routes.ADD_TOURNEY} className='btn btn-primary'><i className='fas fa-plus'></i></Link></div>
+    <div className='dv-text-title'>Tournaments <Link to={routes.ADD_TOURNEY} className='btn btn-primary'><i className='fas fa-plus'></i></Link></div>
     <Table className='text-center dv-table'>
       <thead>
         <tr>

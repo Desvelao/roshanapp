@@ -19,6 +19,7 @@ export const nowToSeconds = () => Math.round(new Date().getTime()/1000)
 export const secondsToDate = (seconds) => {const date = new Date(seconds*1000); return `${date.getDate()}/${date.getMonth()+1}/${date.getFullYear()}`}
 export const secondsToDateExt = (seconds) => {const date = new Date(seconds*1000); return `${date.getDate()}/${date.getMonth()+1}/${date.getFullYear()} ${zerofication(date.getHours())}:${zerofication(date.getMinutes())}`}
 export const secondsToDateHMDM = (seconds) => {const date = new Date(seconds*1000); return `${date.getDate()}/${date.getMonth()+1} - ${zerofication(date.getHours())}:${zerofication(date.getMinutes())}`}
+export const secondsToDateHMDMY = (seconds) => {const date = new Date(seconds*1000); return `${date.getDate()}/${date.getMonth()+1}/${date.getFullYear()} - ${zerofication(date.getHours())}:${zerofication(date.getMinutes())}`}
 export const addSteamToPlayer = (player) => {
   return ({...player, steam : toSteamID(player._id)})
 }
@@ -220,14 +221,7 @@ export const postDiscord = (data,wb) => {
   }
   const avatar_url = 'http://cdn.dota2.com/apps/dota2/blog/spring_cleaning_2018_blog.jpg'
   let webhook = wbs[wb] || wbs.bugs
-  // let data_send = {username : data.author, avatar_url,
-  //   content : '',
-  //   embeds : [{
-  //     author : {text : data.author},
-  //     title : data.title,
-  //     description : data.body
-  //   }]
-  // }
+
   let postData = JSON.stringify(data);
   var parsedUrl = url.parse(webhook);
   var post_options = {

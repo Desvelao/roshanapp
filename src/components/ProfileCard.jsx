@@ -1,14 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
-import { Redirect } from 'react-router'
-import { connect } from 'react-redux'
-import routes from '../constants/routes'
-import { Container, Row, Col, Input, InputGroup, InputGroupAddon, Form, FormGroup, FormText, Label, Button,
-  Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle} from 'reactstrap'
-import { auth, db } from '../firebase'
-import { ButtonsEdit } from '../components/ButtonEditDelete'
 import Desvelao from '../img/desvelao.jpg'
-import DesvelaoBG from '../img/desvelao-bg.jpg'
 import { DESVELAO_PROFILE, DESVELAO_TWITTER, DESVELAO_GITHUB, DESVELAO_STEAM, DESVELAO_REDDIT } from '../constants/links'
 
 const ProfileCard = (props) => {
@@ -43,7 +34,7 @@ const ProfileSocial = (props) => {
         </div>
       </div>
       <div className='dv-profile-social-links'>
-        <a className='mx-1' href={DESVELAO_TWITTER} target='_blank'><i className='fab fa-twitter' id='dv-link-color-twitter'></i></a>
+        {/* <a className='mx-1' href={DESVELAO_TWITTER} target='_blank'><i className='fab fa-twitter' id='dv-link-color-twitter'></i></a> */}
         <a className='mx-1' href={DESVELAO_STEAM} target='_blank'><i className='fab fa-steam' id='dv-link-color-steam'></i></a>
         <a className='mx-1' href={DESVELAO_REDDIT} target='_blank'><i className='fab fa-reddit' id='dv-link-color-reddit'></i></a>
         <a className='mx-1' href={DESVELAO_GITHUB} target='_blank'><i className='fab fa-github' id='dv-link-color-github'></i></a>

@@ -1,9 +1,4 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom'
-import { Redirect } from 'react-router'
-import { connect } from 'react-redux'
-import routes from '../constants/routes'
-import { Alert, Container, Row, Col, Input, InputGroup, InputGroupAddon, Form, FormGroup, FormText, Label, Button } from 'reactstrap'
 import * as emojis from '../constants/emojis.js'
 import { classnames } from '../utils'
 

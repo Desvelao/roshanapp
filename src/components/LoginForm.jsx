@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom'
-import routes from '../constants/routes'
 import { auth } from '../firebase'
-import { Container, Row, Col, Input, InputGroup, InputGroupAddon, Form, FormGroup, FormText, Button } from 'reactstrap'
+import { Row, Col, Input, InputGroup, InputGroupAddon, Form, FormGroup, Button } from 'reactstrap'
 
 class LoginForm extends Component {
   constructor(props){

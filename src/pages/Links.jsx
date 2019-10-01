@@ -1,12 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter, Switch, Route } from 'react-router-dom'
-import LoginForm from '../components/LoginForm.jsx'
-import AdminPanel from '../components/AdminPanel.jsx'
-import FeedCard from '../components/FeedCard.jsx'
-import routes from '../constants/routes'
-import { connect } from 'react-redux'
-import { auth } from '../firebase'
-import { Container, Row, Col, Input, InputGroup, InputGroupAddon, Form, FormGroup, FormText, Button } from 'reactstrap'
+import { Row, Col } from 'reactstrap'
 import { gear , robot , loudspeaker , link, money_mouth_face } from '../constants/emojis.js'
 import FooterSocial from '../components/FooterSocial.jsx'
 import Sidebar from '../components/Sidebar.jsx'

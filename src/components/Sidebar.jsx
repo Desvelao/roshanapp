@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom'
-import { Redirect } from 'react-router'
 import { connect } from 'react-redux'
 import routes from '../constants/routes'
-import { Alert, Container, Row, Col, Input, InputGroup, InputGroupAddon, Form, FormGroup, FormText, Label, Button } from 'reactstrap'
-import { colorBot } from '../constants'
 import FeedCard from '../components/FeedCard.jsx'
-import { gear , robot , loudspeaker , money_mouth_face } from '../constants/emojis.js'
-import { DESVELAO_PROFILE, DESVELAO_BE_PATRON, DESVELAO_KOFI } from '../constants/links'
+import { robot , loudspeaker , money_mouth_face } from '../constants/emojis.js'
+import { DESVELAO_BE_PATRON, DESVELAO_KOFI } from '../constants/links'
 import Patreon from '../img/patreon.png'
 
 class Sidebar extends Component{
@@ -31,7 +28,7 @@ class Sidebar extends Component{
             <a className='d-block' href={this.props.public_info.discord_invite} target='_blank'>Invite Roshan to your server</a>
             <a className='d-block' href={this.props.public_info.discord_server} target='_blank'>Development server</a>
             <div>Bot: <strong>v{this.props.public_info.version}</strong></div>
-            <div><strong>{this.props.public_info.users}</strong> registered</div>
+            <div><strong>{this.props.public_info.users}</strong> players</div>
             Register: <code>r!register</code>
             {/* <a className='d-block' href={DESVELAO_BE_PATRON} target='_blank'>{money_mouth_face} Donate with Patreon {money_mouth_face}</a> */}
             {/* <a className='d-block' href={DESVELAO_KOFI} target='_blank'>{money_mouth_face} Donate with Ko-fi {money_mouth_face}</a> */}

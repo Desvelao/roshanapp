@@ -1,19 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import routes from '../constants/routes'
-import { auth, db } from '../firebase'
+import { auth } from '../firebase'
 import {  Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem, Container, Row, Col, Input, InputGroup, InputGroupAddon, Form, FormGroup, FormText, Button } from 'reactstrap'
-
+  Button } from 'reactstrap'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router'
 import Roshan from '../img/roshan.png'

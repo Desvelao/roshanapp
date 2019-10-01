@@ -15,7 +15,8 @@ export const collections = [
     title : '📈 Stats',
     items : [
       {title : 'Dotabuff', link : 'https://www.dotabuff.com/', description : ''},
-      {title : 'Opendota', link : 'http://opendota.com/', description : ''}
+      {title : 'Opendota', link : 'http://opendota.com/', description : ''},
+      {title : 'Stratz', link : 'https://stratz.com/', description : ''}
     ]
   },
   {
@@ -32,10 +33,11 @@ export const collections = [
   {
     title : '🎮 Discord',
     items : [
-      {title : 'FED', link : 'https://discord.gg/K5krgBg', description : 'Federación Española de Dota 2'},
-      {title : 'Viciuslab', link : 'https://discordapp.com/invite/ZHFHNuQ', description : 'Comunindad de Viciuslab. Streamers/casters de Dota 2'},
-      {title : 'TerritorioDota2', link : 'https://discord.gg/w4s96y', description : 'Comunindad de TerritorioDota2'},
-      {title : 'Comunidad Dota 2', link : 'https://discord.gg/RccRKJV', description : 'Comunindad de Comunidad Dota 2'},
+      {title : 'r/DotA2', link : 'https://discordapp.com/invite/0Pj5D1QKnYAxWHkh', description : 'r/DotA2 community'},
+      {title : 'FED', link : 'https://discord.gg/K5krgBg', description : 'Spanish community'},
+      {title : 'Viciuslab', link : 'https://discordapp.com/invite/ZHFHNuQ', description : 'Spanish community. Dota 2 Streamers/casters'},
+      {title : 'TerritorioDota2', link : 'https://discord.gg/w4s96y', description : 'Spanish community'},
+      {title : 'Comunidad Dota 2', link : 'https://discord.gg/RccRKJV', description : 'Spanish community'},
       {title : 'Foso de Roshan', link : 'https://discord.gg/SxsYkgX', description : 'Roshan development server'}
     ]
   },
@@ -46,15 +48,15 @@ export const collections = [
       {title : 'Wykrhm Reddy', link : 'https://twitter.com/wykrhm', description : 'That Guy from the News. Community Man'},
       {title : 'Matthew Bailey', link : 'https://twitter.com/Cyborgmatt', description : 'Community Man'},
       {title : 'FED', link : 'https://twitter.com/fedota2', description : 'Federación Española de Dota 2'},
-      {title : 'Viciuslab', link : 'https://twitter.com/viciuslab', description : 'Comunindad de Viciuslab. Streamers/casters de Dota 2'},
-      {title : 'TerritorioDota2', link : 'https://twitter.com/territoriodota2', description : 'Comunindad de TerritorioDota2'},
-      {title : 'Comunidad Dota 2', link : 'https://twitter.com/comunidaddota2', description : 'Comunindad de Comunidad Dota 2'}
+      {title : 'Viciuslab', link : 'https://twitter.com/viciuslab', description : 'Comunidad de Viciuslab. Streamers/casters de Dota 2'},
+      {title : 'TerritorioDota2', link : 'https://twitter.com/territoriodota2', description : 'Comunidad de TerritorioDota2'},
+      {title : 'Comunidad Dota 2', link : 'https://twitter.com/comunidaddota2', description : 'Comunidad de Comunidad Dota 2'}
     ]
   },
   {
     title : '🔢 Others',
     items : [
-      {title : 'FED Web', link : 'http://www.fedota2.es', description : 'Web de la FED'},
+      // {title : 'FED Web', link : 'http://www.fedota2.es', description : 'Web de la FED'},
       {title : 'Eventvods', link : 'https://eventvods.com', description : 'VODs'},
       {title : 'Devilesk', link : 'https://devilesk.com/dota2', description : 'Utilidades: interactive map, damage calculator, etc...'},
       {title : 'Overwolf', link : 'https://www.overwolf.com/apps/enemy-stats', description : 'Apps'}

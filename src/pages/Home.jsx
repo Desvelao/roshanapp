@@ -9,10 +9,8 @@ import { Link } from 'react-router-dom'
 // import { getInfoTeam } from './Team'
 // import AddPlayerForm from '../components/AddPlayerForm'
 import { nowToSeconds } from '../utils'
-import ProfileCard, { ProfileSocial } from '../components/ProfileCard'
 import FooterSocial from '../components/FooterSocial.jsx'
 import TourneyCard from '../components/TourneyCard.jsx'
-import FeedCard from '../components/FeedCard.jsx'
 import TourneyInfo from '../components/TourneyInfo.jsx'
 import LeyendaIcons from '../components/LeyendaIcons.jsx'
 import Sidebar from '../components/Sidebar.jsx'
@@ -35,38 +33,52 @@ class Home extends Component{
         <Row>
           <Col md='9'>
             <Link className='d-block mb-2' to={routes.ADD_PUBLIC_TOURNEY}>Suggest a tournament/event</Link>
-            <Row className='justify-content-center' id='dv-home-bg'>
-              <Col className='text-center mx-auto'>
-                <h1 className='dv-text-title mb-2'>Live tournaments <span>({tourneys_active.length})</span></h1>
-                <Row>
-                  {tourneys_active.map( t => (
-                    <Col className='mb-2' xs='6' md='3' key={t._id}>
-                      <TourneyCard onClickInfo={() => this.setState({modal : t})} active tourney={t}/>
-                    </Col>
-                  ))}
+            {tourneys_active.length ? (
+              <React.Fragment>
+                <Row className='justify-content-center' id='dv-home-bg'>
+                  <Col className='text-center mx-auto'>
+                    <h1 className='dv-text-title mb-2'>Live tournaments <span>({tourneys_active.length})</span></h1>
+                    <Row>
+                      {tourneys_active.map( t => (
+                        <Col className='mb-2' xs='6' md='3' key={t._id}>
+                          <TourneyCard onClickInfo={() => this.setState({modal : t})} active tourney={t}/>
+                        </Col>
+                      ))}
+                    </Row>
+                  </Col>
                 </Row>
-              </Col>
-            </Row>
-            <hr className='mb-4'/>
-            <Row className='justify-content-center' id='dv-home-bg'>
-              <Col className='text-center'>
-                <h1 className='dv-text-title mb-2'>Next tournaments <span>({tourneys_next.length})</span></h1>
-                <Row>
-                  {tourneys_next.map( t => (
-                    <Col className='mb-2' xs='6' md='3' key={t._id}>
-                      <TourneyCard onClickInfo={() => this.setState({modal : t})} tourney={t}/>
-                    </Col>
-                  ))}
+                <hr className='mb-4'/>
+              </React.Fragment>
+            ) : null}
+            {tourneys_next.length ? (
+              <React.Fragment>
+                <Row className='justify-content-center' id='dv-home-bg'>
+                  <Col className='text-center'>
+                    <h1 className='dv-text-title mb-2'>Next tournaments <span>({tourneys_next.length})</span></h1>
+                    <Row>
+                      {tourneys_next.map( t => (
+                        <Col className='mb-2' xs='6' md='3' key={t._id}>
+                          <TourneyCard onClickInfo={() => this.setState({modal : t})} tourney={t}/>
+                        </Col>
+                      ))}
+                    </Row>
+                  </Col>
                 </Row>
-              </Col>
-            </Row>
-            <hr className='mb-4'/>
-            <Row className='justify-content-center' id='dv-home-bg'>
-              <Col className='text-center mx-auto'>
-                <LeyendaIcons/>
-              </Col>
-            </Row>
-            <hr className='mb-4'/>
+                <hr className='mb-4'/>
+              </React.Fragment>
+            )  : null}
+            {(tourneys_active.length || tourneys_next.length) ? (
+                <React.Fragment>
+                  <Row className='justify-content-center' id='dv-home-bg'>
+                    <Col className='text-center mx-auto'>
+                      <LeyendaIcons/>
+                    </Col>
+                  </Row>
+                  <hr className='mb-4'/>
+                </React.Fragment>
+              ) : null
+            }
+            
           </Col>
           <Col md='3'>
             <Sidebar/>
@@ -78,19 +90,6 @@ class Home extends Component{
   )}
 }
 
-// <div className='text-center'>
-//   <div className='font-weight-bold dv-text-title'>{gear} Info</div>
-//   <p className='m-0'>
-//   Muestra la leaderboard, feeds, información de torneos sobre la escena española y datos sobre el bot.
-//   </p>
-//   <Link to={routes.ADD_PUBLIC_TOURNEY}>Sugiere un torneo/evento</Link>
-// </div>
-
-
-// <Col className='mx-auto text-center justify-content-center'>
-// </Col>
-// <ProfileCard/>
-// <div><a href={DESVELAO_PROFILE} target='_blank'>Patreon</a></div>
 const mapStateToProps = (state) => ({
   leaderboard : state.leaderboard,
   tourneys : state.tourneys,

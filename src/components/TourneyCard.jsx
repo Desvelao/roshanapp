@@ -1,14 +1,7 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
-import { Redirect } from 'react-router'
-import { connect } from 'react-redux'
-import routes from '../constants/routes'
-import { Container, Row, Col, Input, InputGroup, InputGroupAddon, Form, FormGroup, FormText, Label, Button,
-  Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle} from 'reactstrap'
-import { auth, db } from '../firebase'
-import { ButtonsEdit } from '../components/ButtonEditDelete'
+import React from 'react';
+import { Card, CardImg, CardBody, CardTitle} from 'reactstrap'
 import { secondsToDate , isNew } from '../utils'
-import { pencil, calendar, red_flag, link, new_, information } from '../constants/emojis.js'
+import { pencil, calendar, red_flag, new_, } from '../constants/emojis.js'
 import { tourney_event_default_pic } from '../constants'
 
 const TourneyCard = (props) => {

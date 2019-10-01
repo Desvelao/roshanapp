@@ -1,12 +1,5 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
-import { Redirect } from 'react-router'
-import { connect } from 'react-redux'
-import routes from '../constants/routes'
-import { Container, Row, Col, Input, InputGroup, InputGroupAddon, Form, FormGroup, FormText, Label, Button,
-  Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle} from 'reactstrap'
-import { auth, db } from '../firebase'
-import ButtonEditDelete from '../components/ButtonEditDelete'
+import React from 'react';
+import { Row, Col } from 'reactstrap'
 import { secondsToDate } from '../utils'
 import withModal from '../hocs/withModal.jsx'
 import { pencil, calendar, red_flag, link, new_, information } from '../constants/emojis.js'
