@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { firebase, auth } from '../firebase';
+import { firebase } from '../firebase';
 import { login } from '../reducers/actioncreators'
 
 const withAuthentication = (Component) => {

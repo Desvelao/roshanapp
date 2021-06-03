@@ -36,7 +36,7 @@ class AddFeedForm extends Component{
                   <InputEmoji type='text' id='title' placeholder='Title' onChange={(e) => this.handleState('title',e)} value={title} onSelect={(val) => this.setState({title : val})} closeOnSelect/>
                 </Col>
                 <Col xs='12'>
-                  <Label for='body'>Descripción</Label>
+                  <Label for='body'>Description</Label>
                   <InputEmoji type='textarea' id='body' placeholder='Description' onChange={(e) => this.handleState('body',e)} value={body} onSelect={(val) => this.setState({body : val})} closeOnSelect/>
                 </Col>
                 <Col xs='12'>

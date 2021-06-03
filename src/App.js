@@ -24,11 +24,10 @@ import withAuthentication from './hocs/withAuthentication.jsx'
 
 class App extends Component {
   componentDidMount() {
-    // this.props.loadLeaderboard()
-    // this.props.loadTourneys()
-    // this.props.loadFeeds()
-    // this.props.loadPublic()
-    loadData(this)
+    this.props.loadLeaderboard()
+    this.props.loadTourneys()
+    this.props.loadFeeds()
+    this.props.loadPublic()
   }
   render() {
     return (
@@ -57,36 +56,13 @@ class App extends Component {
     );
   }
 }
-// <Navigation/>
-// <Container className='content'>
-//   <Row>
-//     <Col className='mt-3'>
-//       <Switch>
-//         <Route exact path={routes.HOME} component={Home}/>
-//       </Switch>
-//     </Col>
-//   </Row>
-// </Container>
 
-// <Route exact path={routes.LEADERBOARD} component={Leaderboard}/>
-// <Route exact path={routes.POSTS} component={Posts}/>
-// <Route path={routes.POSTS+'/:team_id'} component={Post}/>
-// <Route path={routes.ADMIN} component={Admin}/>
-//
 const mapDispatchToProps = (dispatch) => ({
   loadLeaderboard : () => dispatch(actions.loadLeaderboardFirebase()),
   loadTourneys : () => dispatch(actions.loadTourneysFirebase()),
   loadFeeds : () => dispatch(actions.loadFeedsFirebase()),
   loadPublic : () => dispatch(actions.loadPublicFirebase()),
 })
-
-function loadData({ props }){
-  props.loadLeaderboard()
-  props.loadTourneys()
-  props.loadFeeds()
-  props.loadPublic()
-}
-// export default connect(null,mapDispatchtoProps)(App);
 
 export default compose(
   withAuthentication, //TODO

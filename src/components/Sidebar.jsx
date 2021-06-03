@@ -36,7 +36,7 @@ class Sidebar extends Component{
             <Link className='d-block' to={routes.ADD_PUBLIC_TOURNEY}>Suggest a tournament/event</Link>
             <Link className='d-block' to={routes.PLAYERCARDBG}>Player card backgrounds</Link>
             <Link className='d-block' to={routes.LINKS}>Util links</Link>
-            <a className='d-block' href={DESVELAO_BE_PATRON} data-patreon-widget-type="become-patron-button" target='_blank'><img className='dv-patreon-button mb-2' src={Patreon} alt='Become a Patron!' target='_blank' /></a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+            {/* <a className='d-block' href={DESVELAO_BE_PATRON} data-patreon-widget-type="become-patron-button" target='_blank'><img className='dv-patreon-button mb-2' src={Patreon} alt='Become a Patron!' target='_blank' /></a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script> */}
             <a className='d-block' href={DESVELAO_KOFI} target='_blank'><img height='34' style={{ border: 0, height: 34 }} src='https://az743702.vo.msecnd.net/cdn/kofi4.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
           </div>
         </div>

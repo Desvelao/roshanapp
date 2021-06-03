@@ -132,7 +132,7 @@ export const date = (seconds) => {
     }
     return text
   }
-  return zero(date.getHours()) + ':' + zero(date.getMinutes()) + ':' + zero(date.getSeconds()) + ' ' + zero(date.getDate()) + '/' + zero((date.getMonth()+1)) + '/' + date.getFullYear()
+  return zero(date.getHours()) + ':' + zero(date.getMinutes()) + ':' + zero(date.getSeconds()) + ' ' + date.getFullYear() + '/' + zero((date.getMonth()+1)) + '/' +  zero(date.getDate())
 }
 
 function zerofication(text,digits){

@@ -23,7 +23,7 @@ class Navigation extends Component{
   render(){
     return (
           <Navbar color="light" fixed='' light expand="md">
-            <Link className='navbar-brand' to={routes.HOME}><img height={30} width={30} className='dv-border-circle d-inline-block align-top' src={Roshan}/> Roshan<span className='dv-nav-subtitle'>, el Inmortal</span></Link>
+            <Link className='navbar-brand' to={routes.HOME}><img height={30} width={30} className='dv-border-circle d-inline-block align-top' src={Roshan}/> Roshan<span className='dv-nav-subtitle'>, the Inmortal</span></Link>
             <NavbarToggler onClick={()=> this.handleToggleNavbar()} className="" />
             <Collapse isOpen={this.state.collapsed} navbar>
               { this.props.authUser ? <MenuAdmin {...this.props}/> : <MenuPublic />}
