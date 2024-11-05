@@ -24,15 +24,15 @@ class Home extends Component{
     this.state = {modal : false}
   }
   render(){
-    const now = nowToSeconds()
-    const tourneys_next = this.props.tourneys.filter(t => (t.until && now < t.until) || (t.start && now < t.start)).sort(sortTourneysNext)
-    const tourneys_active = this.props.tourneys.filter(t => t.start < now && now < t.finish).sort(sortTourneysPlaying)
-    const last_feeds = this.props.feeds.slice(0,3)
+    // const now = nowToSeconds()
+    // const tourneys_next = this.props.tourneys.filter(t => (t.until && now < t.until) || (t.start && now < t.start)).sort(sortTourneysNext)
+    // const tourneys_active = this.props.tourneys.filter(t => t.start < now && now < t.finish).sort(sortTourneysPlaying)
+    // const last_feeds = this.props.feeds.slice(0,3)
     return (
       <div>
         <Row>
           <Col md='9'>
-            <Link className='d-block mb-2' to={routes.ADD_PUBLIC_TOURNEY}>Suggest a tournament/event</Link>
+            {/* <Link className='d-block mb-2' to={routes.ADD_PUBLIC_TOURNEY}>Suggest a tournament/event</Link>
             {tourneys_active.length ? (
               <React.Fragment>
                 <Row className='justify-content-center' id='dv-home-bg'>
@@ -77,7 +77,7 @@ class Home extends Component{
                   <hr className='mb-4'/>
                 </React.Fragment>
               ) : null
-            }
+            } */}
             
           </Col>
           <Col md='3'>

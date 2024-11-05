@@ -28,8 +28,8 @@ class Features extends Component {
                             <img src={Roshan} height="24" />
                             <span> Bot features</span>
                         </div>
-                        <p><strong>Roshan</strong> is a bot with info about <strong>Dota 2</strong> and <strong>Artifact</strong> with <strong>40+</strong> commands.</p>
-                        <p><strong>Register commnad:</strong> <code>r!register</code></p>
+                        <p><strong>Roshan</strong> is a bot with info about <strong>Dota 2</strong></p>
+                        <p><strong>Register command:</strong> <code>/register</code></p>
                         <p><strong>Languages:</strong> english, spanish</p>
                     </Col>
                 </Row>
@@ -41,7 +41,7 @@ class Features extends Component {
                         </Row>
                     </Col>
                 </Row>
-                <Row>
+                {/* <Row>
                     <Col>
                         <div className='dv-text-title mb-2'>{supporter} Only for Supporters</div>
                         <p className='text-center'>Get supporter features through <a href={DESVELAO_KOFI}>Ko-fi</a> donations and get a piece of Roshan cheese {supporter} (figurated xd)</p>
@@ -52,11 +52,10 @@ class Features extends Component {
                         <div className='text-center my-2'><em>and maybe more coming...</em></div>
                         <div className='text-center my-2 py-2'>
                             <Link className='mx-2' to={routes.PLAYERCARDBG}>See playercard backgrounds</Link>
-                            {/* <a className='mx-2' href={DESVELAO_BE_PATRON} data-patreon-widget-type="become-patron-button" target='_blank'><img className='dv-patreon-button mb-2' src={Patreon} alt='Become a Patron!' target='_blank' /></a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script> */}
                             <a className='mx-2' href={DESVELAO_KOFI} target='_blank'><img height='34' style={{ border: 0, height: 34 }} src='https://az743702.vo.msecnd.net/cdn/kofi4.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
                         </div>
                     </Col>
-                </Row>
+                </Row> */}
             </div>
         )
     }
@@ -68,22 +67,11 @@ const features = [
         img: feature_img_dota2,
         features: [
             'Player stats, public games, last competitive games, world ranking by region',
-            'Items, heroes, and skills info',
-            { text: 'r/Dota2', url: 'https://www.reddit.com/r/Dota2' },
-            {text : 'Player cards', url: '#/playercardbg'},
+            // 'Items, heroes, and skills info',
+            // { text: 'r/Dota2', url: 'https://www.reddit.com/r/Dota2' },
+            // {text : 'Player cards', url: '#/playercardbg'},
             {text : 'Registered players leaderboard', url: '#/leaderboard'},
             'Random hero picker',
-            'Search steam profiles by username'
-        ]
-    },
-    {
-        name: 'Artifact',
-        img: feature_img_artifact,
-        features: [
-            'Cards, sets, keywords info',
-            'Deck decoder',
-            'Search cards and decks decoded',
-            { text: 'r/Artifact', url: 'https://www.reddit.com/r/Artifact'}
         ]
     },
     {
@@ -91,20 +79,6 @@ const features = [
         img: feature_img_utilityfun,
         features: [
             'Roll dice',
-            'Create initial raffle for tournaments',
-            'Memes',
-            'Related images',
-            'Stickers'
-        ]
-    },
-    {
-        name: 'Servers',
-        img: feature_img_servers,
-        features: [
-            'Configure some twitter feeds to receive in some guild channel',
-            'Giveaways for server members (or by roles)',
-            'Delete until last 100 messages (needed Aegis role)',
-            `Pin/unpin messages to channels reactioning with ${pushpin} (needed Aegis role)`
         ]
     }
 ]

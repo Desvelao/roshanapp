@@ -11,8 +11,6 @@ class Sidebar extends Component{
   constructor(props){
     super(props)
   }
-  componentDidMount(){
-  }
   render(){
     const last_feeds = this.props.feeds.slice(0,3)
     return (
@@ -29,11 +27,9 @@ class Sidebar extends Component{
             <a className='d-block' href={this.props.public_info.discord_server} target='_blank'>Development server</a>
             <div>Bot: <strong>v{this.props.public_info.version}</strong></div>
             <div><strong>{this.props.public_info.users}</strong> players</div>
-            Register: <code>r!register</code>
+            Register: <code>/register</code>
             {/* <a className='d-block' href={DESVELAO_BE_PATRON} target='_blank'>{money_mouth_face} Donate with Patreon {money_mouth_face}</a> */}
-            {/* <a className='d-block' href={DESVELAO_KOFI} target='_blank'>{money_mouth_face} Donate with Ko-fi {money_mouth_face}</a> */}
             <Link className='d-block' to={routes.FEEDBACK}>Feedback</Link>
-            <Link className='d-block' to={routes.ADD_PUBLIC_TOURNEY}>Suggest a tournament/event</Link>
             <Link className='d-block' to={routes.PLAYERCARDBG}>Player card backgrounds</Link>
             <Link className='d-block' to={routes.LINKS}>Util links</Link>
             {/* <a className='d-block' href={DESVELAO_BE_PATRON} data-patreon-widget-type="become-patron-button" target='_blank'><img className='dv-patreon-button mb-2' src={Patreon} alt='Become a Patron!' target='_blank' /></a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script> */}
@@ -54,9 +50,5 @@ const mapStateToProps = (state) => ({
   feeds : state.feeds,
   public_info : state.public_info
 })
-
-// const mapDispatchToProps = (dispatch) => ({
-//   addFeed : (feed,rv,rj) => dispatch(addFeedFirebase(feed,rv,rj))
-// })
 
 export default connect(mapStateToProps)(Sidebar)

@@ -29,7 +29,6 @@ const ProfileSocial = (props) => {
         </div>
         <div className='dv-profile-social-name mx-1'>
           <a className='' href={DESVELAO_PROFILE} target='_blank'>Desvelao^^</a>
-          <div className='dv-profile-social-name-discriminator mx-2'>#2956</div>
         </div>
       </div>
       <div className='dv-profile-social-links'>
